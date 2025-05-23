@@ -1,0 +1,339 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2em;
+  border-bottom: 1px solid #ccc;
+}
+
+img {
+  width: 300px;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.servicio {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.servicio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.servicio img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0056b3;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.boton-flotante:hover {
+  background-color: #003f88;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+.logo-con-fondo {
+  background-image: url('logo-top-realtors.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+ 
+  height: 100px; 
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.logo-con-fondo h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  position: relative;
+}
+
+
+#contacto {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.formulario {
+  flex: 1 1 400px;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario button {
+  padding: 12px;
+  background-color: #2a7ae4;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #1c5dc9;
+}
+
+.mapa {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.mapa h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+
+#mensaje-exito {
+  position: fixed;          /* fijo sobre toda la pantalla */
+  top: 50%;                /* centro vertical */
+  left: 50%;               /* centro horizontal */
+  transform: translate(-50%, -50%);
+  background-color: #e6ffed; /* fondo verde suave */
+  border: 2px solid #4CAF50; /* borde verde */
+  color: #2e7d32;          /* texto verde oscuro */
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 9999;           /* siempre encima */
+  display: none;           /* oculto por defecto */
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+
+/* Animación para que aparezca suavemente */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+#mensaje-exito {
+  position: fixed;          /* fijo sobre toda la pantalla */
+  top: 50%;                /* centro vertical */
+  left: 50%;               /* centro horizontal */
+  transform: translate(-50%, -50%);
+  background-color: #e6ffed; /* fondo verde suave */
+  border: 2px solid #4CAF50; /* borde verde */
+  color: #2e7d32;          /* texto verde oscuro */
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 9999;           /* siempre encima */
+  display: none;           /* oculto por defecto */
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+
+/* Animación para que aparezca suavemente */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+header.encabezado {
+  position: relative;
+  background-image: url('logo-top-realtors.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* o 'cover' según prefieras */
+  height: 210px; /* Fija la altura para que no crezca */
+  color: white;
+  text-align: center;
+   /* elimina padding si es necesario */
+  display: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Si necesitas que el texto tenga fondo para mayor legibilidad */
+header.encabezado h1 {
+  background-color: rgba(0,0,0,0.5);
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+
+/* modificacion main solo dos secciones   */
+#inicio, #nosotros {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+#inicio:hover, #nosotros:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+#inicio h2, #nosotros h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+  border-bottom: 3px solid #2a7f62;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+#inicio p, #nosotros p {
+  font-size: 1.15rem;
+  color: #555;
+}
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+  #inicio, #nosotros {
+    padding: 25px 20px;
+    margin: 20px 15px;
+  }
+  #inicio h2, #nosotros h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+

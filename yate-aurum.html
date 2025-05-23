@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Yate Aurum - Flyers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      background: #004466;
+      color: white;
+      padding: 1em 0;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em 1em;
+    }
+    .flyer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+    }
+    .flyer {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .flyer img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .flyer:hover img {
+      transform: scale(1.05);
+    }
+    .flyer-title {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 1em 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Yate Aurum - Experiencias Exclusivas</h1>
+  </header>
+
+  <main>
+    <section class="flyer-container">
+      <div class="flyer">
+        <img src="classic-tour.jpg" alt="Classic Tour">
+        <div class="flyer-title">Classic Tour</div>
+      </div>
+      <div class="flyer">
+        <img src="premium-aurum.jpg" alt="Premium Aurum">
+        <div class="flyer-title">Premium Aurum</div>
+      </div>
+      <div class="flyer">
+        <img src="nocturno.jpg" alt="Atardecer y Nocturno">
+        <div class="flyer-title">Atardecer & Nocturno</div>
+      </div>
+      <div class="flyer">
+        <img src="tours-especiales.jpg" alt="Tours Especiales">
+        <div class="flyer-title">Tours Especiales</div>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 Top Realtors - Yate Aurum</p>
+  </footer>
+</body>
+  <a href="index.html#inicio" class="boton-flotante" title="Volver al inicio">Volver al inicio</a>
+
+</html>

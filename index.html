@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Realtors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="encabezado">
+    <div class="logo-con-fondo">
+      <h1>Top Realtors</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <!-- <li><a href="#galeria">Galería</a></li> -->
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section id="inicio">
+      <h2>Bienvenidos a Top Realtors</h2>
+      <p>Expertos en encontrar tu mejor aventura .</p>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>Top Realtors es una agencia especializada en ofrecer servicios turísticos
+        e inmobiliarios exclusivos en Ecuador. Nos dedicamos a atender las
+        necesidades de inversores extranjeros y locales, con proyectos
+        inmobiliarios de alta calidad en las áreas más turísticas del país.</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="servicios-grid">
+        <a href="yate-aurum.html" class="servicio">
+          <img src="yate.jpg" alt="Yate Aurum">
+          <h3>Yate Aurum</h3>
+        </a>
+        <a href="terrazas-del-mar-ii.html" class="servicio">
+          <img src="terrazas.jpg" alt="Terrazas del Mar II">
+          <h3>Terrazas del Mar II</h3>
+        </a>
+        <a href="terramar-hoteles.html" class="servicio">
+          <img src="terramar.jpg" alt="Terramar Hoteles">
+          <h3>Terramar Hoteles</h3>
+        </a>
+        <a href="inmosegurity.html" class="servicio">
+          <img src="inmosegurity.jpg" alt="Inmosegurity">
+          <h3>Inmosegurity</h3>
+        </a>
+      </div>
+    </section>
+
+  
+    <!-- GALERÍA -->
+    <!--<section id="galeria">
+      <h2>Galería</h2>
+      <img src="casa1.jpg" alt="Propiedad 1">
+      <img src="casa2.jpg" alt="Propiedad 2">
+    </section>  -->
+    
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contacto-contenedor">
+        <div class="formulario">
+          <form action="https://formsubmit.co/toprealtors.ecu@gmail.com" method="POST">
+            <h3>Envíanos un mensaje</h3>
+            <input type="text" name="name" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <input type="tel" name="phone" placeholder="Tu número de teléfono" required>
+            <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+
+            <input type="hidden" name="_captcha" value="false">
+             <!-- <input type="hidden" name="_next" value="https://toprealtors.[johannlv98].repl.co/gracias.html">-->
+
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="mensaje-exito" style="display:none; color: green; margin-top: 15px; font-weight: bold;">
+            ¡Gracias! Pronto uno de nuestros asesores se comunicará con usted.
+          </div>
+
+        </div>
+
+        <div class="mapa">
+          <h3>Ubicación</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500.2194999737588!2d-80.5364321733371!3d-0.8614191087245623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902bc1839a62438f%3A0x37e91b26c912886a!2sTerramar%20Hoteles%20Crucita!5e0!3m2!1ses!2ec!4v1747851422502!5m2!1ses!2ec" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Top Realtors. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    const formulario = document.querySelector('#contacto form');
+    const mensajeExito = document.getElementById('mensaje-exito');
+
+    formulario.addEventListener('submit', function (e) {
+      e.preventDefault(); // evita que recargue la página
+
+      const formData = new FormData(formulario);
+
+      fetch(formulario.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          formulario.reset(); // limpia campos
+          mensajeExito.style.display = 'block'; // muestra mensaje
+          setTimeout(() => {
+            mensajeExito.style.display = 'none'; // oculta mensaje después de 5s
+          }, 5000);
+        } else {
+          alert('Ocurrió un error. Intenta nuevamente.');
+        }
+      })
+      .catch(() => {
+        alert('Error de red. Por favor intenta más tarde.');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
